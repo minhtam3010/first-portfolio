@@ -15,6 +15,7 @@ const Contact = () => {
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
+          {/* eslint-disable react/no-unescaped-entities */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
@@ -40,6 +41,7 @@ const Contact = () => {
             <input type="text" placeholder="subject" className="input" />
             <textarea placeholder="message" className="textarea"></textarea>
             <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+              {/* eslint-disable react/no-unescaped-entities */}
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let's talk
               </span>

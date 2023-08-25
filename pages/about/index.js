@@ -25,18 +25,22 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={"1"} />,
+          <FaCss3 key={"2"} />,
+          <FaJs key={"3"} />,
+          <FaReact key={"4"} />,
+          <SiNextdotjs key={"5"} />,
+          <SiFramer key={"6"} />,
+          <FaWordpress key={"7"} />,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key={"8"} />,
+          <SiAdobexd key={"9"} />,
+          <SiAdobephotoshop key={"10"} />,
+        ],
       },
     ],
   },
@@ -129,6 +133,7 @@ const About = () => {
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs.
           </motion.h2>
+          {/* eslint-disable react/no-unescaped-entities */}
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
@@ -217,7 +222,7 @@ const About = () => {
             {aboutData[index].info.map((item, itemIdx) => {
               return (
                 <div
-                  key={itemIdx}
+                  key={itemIdx + "info"}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
